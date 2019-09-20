@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "150993775962",
+    "firebase_url": "https://aspire-20.firebaseio.com",
+    "project_id": "aspire-20",
+    "storage_bucket": "aspire-20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150993775962:android:622148454fd4827a2fd763",
+        "android_client_info": {
+          "package_name": "com.example.a20"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "150993775962-j42jbbs1astkqt1squmioa5cmkq2i9kq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAI5oUB17RAmdrOGs4QTLcIcjChwG9-SPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "150993775962-j42jbbs1astkqt1squmioa5cmkq2i9kq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
