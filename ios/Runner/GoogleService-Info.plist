@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>150993775962-mqfpec7ks7icmoijpgouiqn2lbtsjeh9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.150993775962-mqfpec7ks7icmoijpgouiqn2lbtsjeh9</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>150993775962-baj6n63l543m0fh14ia038e72htn2uc2.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCqi2HwmhW_0RaH_mxr2WOTVBGrQJiTz3s</string>
+	<key>GCM_SENDER_ID</key>
+	<string>150993775962</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ml.aspire20.ios</string>
+	<key>PROJECT_ID</key>
+	<string>aspire-20</string>
+	<key>STORAGE_BUCKET</key>
+	<string>aspire-20.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:150993775962:ios:1e51f8f9efc9d5b32fd763</string>
+	<key>DATABASE_URL</key>
+	<string>https://aspire-20.firebaseio.com</string>
+</dict>
+</plist>
