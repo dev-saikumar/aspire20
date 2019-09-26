@@ -8,10 +8,11 @@ import './eventspage.dart';
 import './feedspage.dart';
 import './projectspage.dart';
 import 'package:sticky_headers/sticky_headers.dart';
-import '../models/userdata.dart';
+import 'package:a20/models/userdata.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({this.clgname});
+
   final String clgname;
 
   @override
@@ -19,29 +20,36 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin{
-  final _scaffoldkey=GlobalKey<ScaffoldState>();
-  ScrollController _controller1;
   TabController tabController;
+
+  ScrollController _controller1;
+  final _scaffoldkey=GlobalKey<ScaffoldState>();
+
+  @override
+  void dispose() {
+  tabController.dispose();
+  _controller1.dispose();
+  super.dispose();
+  }
+
   @override
   void initState() {
-      UserDetails().getdetails(Provider.of<FirebaseUser>(context).email,Provider.of<FirebaseUser>(context).displayName);
       tabController=TabController(initialIndex: 0,length: 3,vsync: this);
       _controller1=ScrollController();
-      tabController.addListener((){
-        tabController.indexIsChanging?_controller1.jumpTo(_controller1.initialScrollOffset):null;
-      });
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+     Provider.of<UserDetails>(context).getdetails(Provider.of<FirebaseUser>(context).email);
     SystemChrome.setSystemUIOverlayStyle(
         SystemUiOverlayStyle(statusBarColor: Colors.black,statusBarIconBrightness: Brightness.light));
     final double _height = MediaQuery.of(context).size.height;
     final double _width = MediaQuery.of(context).size.width;
+    debugPrint("${Provider.of<UserDetails>(context).email} jhjhjhjhjhjh");
     return Scaffold(
       key: _scaffoldkey,
-      drawer: SideBar(),
+      drawer: SideBar(n: 1,),
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.menu,color: Colors.black.withOpacity(0.5),),
@@ -54,12 +62,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin{
           IconButton(
             icon: Icon(Icons.notifications_active,color: Colors.indigo.withOpacity(0.4),),
             onPressed: (){
-
+              debugPrint(Provider.of<UserDetails>(context).email);
             },
           )
         ],
         title: Text(
-          'A20~${widget.clgname}',
+          'A20~${Provider.of<FirebaseUser>(context).displayName.split("-")[1]}',
           style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.black.withOpacity(0.65)),
@@ -182,11 +190,5 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin{
         ),
       ),
     );
-  }
-  @override
-  void dispose() {
-  tabController.dispose();
-  _controller1.dispose();
-  super.dispose();
   }
 }

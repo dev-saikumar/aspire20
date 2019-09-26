@@ -34,7 +34,6 @@ class _ProjectsPageState extends State<ProjectsPage> {
 }
 
 class MyProjects extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     final double height=MediaQuery.of(context).size.height;
